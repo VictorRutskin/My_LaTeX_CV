@@ -1,0 +1,497 @@
+\documentclass[oneside]{article}
+
+\usepackage{wallpaper}
+\usepackage{geometry}
+\usepackage[
+    unicode=true,
+    bookmarks=true,
+    bookmarksnumbered=false,
+    bookmarksopen=true,
+    bookmarksopenlevel=1,
+    breaklinks=false,
+    pdfborder={0 0 0},
+    backref=false,
+    colorlinks=false
+    ]{hyperref}
+\usepackage{lastpage}
+\usepackage{hyphenat}
+\usepackage{hyphsubst}
+\usepackage{tabularx}
+\usepackage{moresize}
+\usepackage[document]{ragged2e}
+
+\usepackage[scaled]{helvet}
+\usepackage{fontawesome5}
+\usepackage{academicons}
+\usepackage[defaultfam,tabular,oldstyle]{montserrat}
+\usepackage[T1]{fontenc}
+\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
+
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+\usepackage{flags}
+
+% bubble diagram configuration
+\usepackage{smartdiagram}
+\smartdiagramset{
+	% default font size is \large, so adjust to harmonize with sidebar layout
+	bubble center node font = \footnotesize,
+	bubble node font = \footnotesize,
+	% default: 4cm/2.5cm; make minimum diameter relative to sidebar size
+	bubble center node size = 0.4\sidebartextwidth,
+	bubble node size = 0.25\sidebartextwidth,
+	distance center/other bubbles = 1.5em,
+	% set center bubble color
+	bubble center node color = maincolor!70,
+	% define the list of colors usable in the diagram
+	set color list = {maincolor!10, maincolor!40,
+	maincolor!20, maincolor!60, maincolor!35},
+	% sets the opacity at which the bubbles are shown
+	bubble fill opacity = 0.8,
+}
+
+\setlength{\parindent}{0pt}
+\titleformat{\section}{\normalfont}{}{0pt}{}
+
+\renewcommand{\arraystretch}{1.4}
+
+\setlength\fboxrule{0pt}
+\setlength\fboxsep{12pt}
+
+\titlespacing{\section}{0pt}{1.5ex plus .1ex minus .2ex}{1pc}
+
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+
+% PDF Meta Info
+\hypersetup{
+    pdftitle={Victor_Rutskin_CV},
+    pdfauthor={Victor Rutskin},
+    pdfsubject={CV}
+}
+
+% Paper size
+\geometry{
+    a4paper,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    nohead,
+    % includefoot,
+    nomarginpar
+}
+
+% Background Color of the Sidebar Column
+\definecolor{sidebg}{cmyk}{1, 0.1, 0, 0.25}
+% Background Color of the Main Column
+\definecolor{mainbg}{cmyk}{0, 0, 0.00, 0.00}
+
+% Text Color of the Main Column
+\definecolor{maintext}{cmyk}{1, 0.02, 0, 0.8}
+% Text Color of the Sidebar Column
+\definecolor{sidetext}{cmyk}{0, 0, 0.07, 0.04}
+
+\pagecolor{mainbg}
+
+\begin{document}
+\setlength{\topskip}{0pt}\setlength{\footskip}{0pt}%
+\fcolorbox{red}{sidebg}{%
+    \begin{minipage}[t][\textheight-2\fboxsep-2\fboxrule][t]{\dimexpr0.45\textwidth-2\fboxrule-2\fboxsep-4em\relax}         \small % Added \small for smaller text
+        \color{sidetext}
+        % NAME & Occupation 
+        {\bfseries\scshape\Huge\centerline{Victor Rutskin}} \\
+        \vspace{6pt}
+        {\normalfont\centerline{\textbf{Full Stack Developer}}}
+
+        \rule{\linewidth}{0.4pt} \\
+        % PERSONAL INFROMATION
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Personal info}
+        \section*{\large \textbf {Personal info}}
+        \vspace{-1\baselineskip} 
+        \begin{tabularx}{\textwidth}{cY}
+            \faEnvelope{}   & \href{mailto:Lashaka666@gmail.com}{Lashaka666@gmail.com} \\
+            \faPhone{}      & 052-3163179 \\
+            \faMapMarker{}  & Yavne, Israel \\
+        \end{tabularx}
+        \vspace{2pt} \\
+        \rule{\linewidth}{0.4pt} \\
+        % LINKS
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Links}
+        \section*{\large \textbf {Links}}
+        \vspace{-1\baselineskip} 
+        \begin{tabular}{cl}
+            \faGithub{}   & \href{https://github.com/Lashaka}{Github} \\
+            \faLinkedin{} & \href{https://www.linkedin.com/in/victor-rutskin/}{Linkedin} \\
+            \faPen{}     & \href{https://drive.google.com/drive/folders/1WNTWVhgmSy2Srt8VOUuspCrWmtmm6eF0}{References} \\
+            \faEnvelope{} & \href{https://drive.google.com/drive/folders/1J1ULBr3MHknvCdA-tgDWukTBFTxK6miF?usp=sharing}{Certificates} \\
+        \end{tabular}
+        \vspace{2pt} \\
+        \rule{\linewidth}{0.4pt} \\
+        %  SKILLS
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Skills}
+        \section*{\large \textbf {Skills}}
+        \vspace{-1\baselineskip} 
+        \begin{tabularx}{\textwidth}{cY}
+            \faStar{}        &  Software \& Web Development \\
+            \faStar{}        &  Object Oriented Programming \\
+            \faStar{}        &  Web API Integration \\
+            \faStar{}        &  Micro-Service Architecture \\
+            \faStar{}        &  Relational Databases \\
+            \faStar{}        &  Web Application Cyber Security \\
+            \faStar{}        &  Scripting \\
+        \end{tabularx}
+        \vspace{1pt} \\
+        \rule{\linewidth}{0.4pt}
+        % Technologies
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Technologies}
+
+        % Frontend
+        \section*{\large \textbf{Technologies}}
+        
+        \section*{\normalfont\centerline{\textbf{Frontend}}}
+        \vspace{-2\baselineskip} 
+        
+        \begin{tabularx}{\textwidth}{cY}
+            \faCode{}        & Javascript, HTML \& CSS \\
+            \faAngular{}        & Angular \\
+            \faCode{}        & Typescript \\
+            \faBootstrap{}        & Bootstrap \\
+        \end{tabularx}
+        \vspace{1pt} \\
+
+        % Backend
+        \section*{\normalfont\centerline{\textbf{Backend}}}
+        \vspace{-2\baselineskip} 
+        
+        \begin{tabularx}{\textwidth}{cY}
+            \faCode{}        & C\# \\
+            \faCode{}        & .NET Core \& Framework \\
+            \faPython{}        & Python \\
+            \faDatabase{}        & Microsoft SQL server (MSSQL) \\
+        \end{tabularx}
+        \vspace{1pt} \\
+
+        % Other       
+        \section*{\normalfont\centerline{\textbf{Other}}}
+        \vspace{-2\baselineskip} 
+        
+        \begin{tabularx}{\textwidth}{cY}
+            \faGit{}        & Git \\
+            \faSatelliteDish{}        & Electronic Warfare, Cyber RF, etc..  \\
+            \faCamera{}        & Photoshop \\
+            \faUserNinja{}        & Burpsuite \\
+        \end{tabularx}
+        \vspace{1pt} \\
+
+        \rule{\linewidth}{0.4pt}
+
+
+        % Hobbies
+        \section*{\normalfont\centerline{\textbf{Hobbies}}}
+        \vspace{-2\baselineskip} 
+        
+        \begin{tabularx}{\textwidth}{cY} 
+            \faGamepad{} & Gaming \\
+            \faUtensils{} & Cooking \\
+            \faYinYang{} & Martial Arts \\
+          % \faSword{} & Martial Arts \\
+        \end{tabularx}
+        \vspace{1pt} \\
+        
+        \rule{\linewidth}{0.4pt}
+
+        % Languages
+        \section*{\normalfont\centerline{\textbf{Languages}}}
+        \vspace{-2\baselineskip} 
+        
+        \begin{tabularx}{\textwidth}{cY}       
+            \includegraphics[height=1.1em]{flag_israel.png} & Hebrew \hfill {\fontsize{16pt}{1em}\selectfont $\star\star\star\star\star$} \\
+            \includegraphics[height=1em]{flag_usa.png} & English \hfill {\fontsize{16pt}{1em}\selectfont $\star\star\star\star\circ$} \\
+            \includegraphics[height=1.1em]{flag_russia.png} & Russian \hfill {\fontsize{16pt}{1em}\selectfont $\star\star\star\star\circ$} \\
+        \end{tabularx}
+        \vspace{1pt} \\
+        
+        \rule{\linewidth}{0.4pt}
+
+    \end{minipage}
+}  
+\hfill
+\fcolorbox{red}{mainbg}{%
+    \begin{minipage}[t][\dimexpr\textheight-2\fboxrule-2\fboxsep\relax][t]{\dimexpr0.55\textwidth-2\fboxrule-2\fboxsep\relax} \raggedright
+        \color{maintext}
+        % ABOUT ME
+        \phantomsection{}
+        \addcontentsline{toc}{section}{About Me}
+        \section*{\scshape\LARGE \textbf{About Me }}
+        \vspace{-1\baselineskip} 
+        I am a tech enthusiast with a keen interest in programming and cybersecurity.
+        \par \vspace{0.5\baselineskip} 
+        In the course of my professional journey, I have primarily focused on developing web APIs using .NET Core and Angular-based web applications.
+        \par \vspace{0.5\baselineskip} 
+        Beyond coding, I enjoy experimenting with gadgets and keeping myself updated on cutting-edge technologies.
+        \par \vspace{0.5\baselineskip} 
+        My knowledge extends to web application security practices, adding an extra layer of expertise to my skill set.
+ \\
+%
+        \vspace{2\baselineskip} 
+        {\LARGE \textbf{Employment History}} \\
+        \vspace{1\baselineskip} 
+
+        \textbf{\large Full Stack Developer, Albar} \\
+        {\scshape\fontseries{light}\selectfont\footnotesize Apr 2023 \textendash{} Present} 
+        \vspace{0.5\baselineskip} 
+        
+        \begin{itemize}
+            \setlength{\itemsep}{-3pt}
+             % {\large \textbf{Credit Score Evaluation System}} \\
+            \item \textbf{\normalsize Credit Score Evaluation System}
+            \vspace{-0.5\baselineskip} 
+            \begin{itemize}
+                \item I had a critical role in a large project that Evaluated customers' credit scores for loan eligibility.
+                \item Collaborated with multiple companies through Web API and Web Service communication.
+                \item Handled sensitive information.
+            \end{itemize}
+            \vspace{0.5\baselineskip} 
+
+            \item \textbf{\normalsize Project Management Web Application}
+            \vspace{-0.5\baselineskip} 
+            \begin{itemize}
+                \item Independently developed.
+                \item Utilized by the Dev team for deployment processes.
+                \item Highly interactive and functional.
+            \end{itemize}
+            \vspace{0.5\baselineskip} 
+
+            \item \textbf{\normalsize Smart Form Project}
+            \vspace{-0.5\baselineskip} 
+            \begin{itemize}
+                \item Created a smart form project for efficient form generation.
+                \item Improved maintainability and accelerated deployment of new forms.
+            \end{itemize}
+            \vspace{0.5\baselineskip} 
+
+            \item \textbf{\normalsize Responsive Website Enhancement}
+            \vspace{-0.5\baselineskip} 
+            \begin{itemize}
+                \item Transformed a single-screen-sized website into a responsive one.
+                \item Enhanced interactivity and wrote a more efficient code base.
+            \end{itemize}
+            \vspace{0.5\baselineskip} 
+
+            \item \textbf{\normalsize Legacy Project Maintenance and Microservices Transition}
+            \vspace{-0.5\baselineskip} 
+            \begin{itemize}
+                \item Maintained and recreated legacy projects in a microservices architecture.
+                \item Fearlessly handled complex tasks and turned the unknown into the known.
+            \end{itemize}
+            \vspace{0.5\baselineskip} 
+
+        \end{itemize}
+
+                  \textbf{\large Electronic Warfare \& Cyber Operator,IL Air Force} \\
+                    {\scshape\fontseries{light}\selectfont\footnotesize Oct 2019 \textendash{} Jun 2022} 
+                    \vspace{0.5\baselineskip} 
+        \begin{itemize}
+            \setlength{\itemsep}{-3pt}
+            \begin{itemize}
+                \item Operated multiple electronic warfare systems, for attack \& defence purposes under intense pressure  for more than 5000 Operational shift hours.
+                \item Wide knowledge about ECM (Electronic countermeasure) \& CRF (Cyber Over RF).
+                \item Led a team as an Instruction Team Leader, and had more than 300 hours of soldier instruction, training \& teaching.
+                \item 03 Combatant Status.
+            \end{itemize}
+
+        \end{itemize}
+
+               \vfill%
+        {\hfill\small\fontseries{extralight}\selectfont Page \thepage \hspace{0.1em} of \pageref{LastPage}\hfill}
+    \end{minipage}
+}%
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PAGE 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fcolorbox{red}{mainbg}{%
+    \begin{minipage}[t][\dimexpr\textheight-2\fboxrule-2\fboxsep\relax][t]{\dimexpr0.6\textwidth-2\fboxrule-2\fboxsep\relax}
+        \color{maintext}
+        % PROJECTS
+
+        {\LARGE \textbf{Education}} \\
+        \vspace{1\baselineskip} 
+
+        \textbf{\large Software Development Course, Sela College} \\
+        {\scshape\fontseries{light}\selectfont\footnotesize Jun 2022 \textendash{} Apr 2023} 
+        \vspace{0.5\baselineskip} 
+            \begin{itemize}    
+            \setlength{\itemsep}{-3pt}
+            \item \textbf{\normalsize Intensive Program of 10 Months that covers the following areas}
+            \vspace{-0.5\baselineskip} 
+            \begin{itemize}
+                \item Object Oriented Programming using C#.
+                \item Data Structures.
+                \item Algorithms and Complexity.
+                \item Javascript,HTML & CSS.
+                \item .NET Framework & Core, ASP.NET Core MVC , WPF & Winforms.
+                \item Angular.
+                \item React.
+                \item NodeJS.
+                \item Sql.
+                \item Azure.
+                \item Git.              
+            \end{itemize}
+         
+            \vspace{1\baselineskip} 
+
+        \end{itemize}
+        
+        \textbf{\large Tihon Hadash Tel-Aviv} \\
+        {\scshape\fontseries{light}\selectfont\footnotesize 2016 \textendash{} 2019} 
+            \vspace{4\baselineskip} 
+
+          {\LARGE \textbf{Courses}} \\
+        \vspace{1\baselineskip} 
+        \textbf{\large The Complete Cyber Security Course : Hackers Exposed! By Nathan House, Udemy} \\
+        \vspace{1\baselineskip} 
+        \textbf{\large Basic \& Advanced Electronic Warfare Courses, IL Air Force} \\
+        \vspace{1\baselineskip} 
+        \textbf{\large Advanced Soldier Instructing \& Training Course, IL Air Force} \\
+        
+                       \vfill%
+        {\hfill\small\fontseries{extralight}\selectfont Page \thepage \hspace{0.1em} of \pageref{LastPage}\hfill}
+        
+    \end{minipage}
+}
+\hfill%
+\fcolorbox{red}{sidebg}{%
+\begin{minipage}[t][\textheight-2\fboxsep-2\fboxrule][t]{\dimexpr0.45\textwidth-2\fboxrule-2\fboxsep-4em\relax}
+
+        \small % Added \small for smaller text
+        \color{sidetext}
+        % NAME & Occupation 
+        {\bfseries\scshape\Huge\centerline{Victor Rutskin}} \\
+        \vspace{6pt}
+        {\normalfont\centerline{\textbf{Full Stack Developer}}}
+
+        \rule{\linewidth}{0.4pt} \\
+        % PERSONAL INFROMATION
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Personal info}
+        \section*{\large \textbf {Personal info}}
+        \vspace{-1\baselineskip} 
+        \begin{tabularx}{\textwidth}{cY}
+            \faEnvelope{}   & \href{mailto:Lashaka666@gmail.com}{Lashaka666@gmail.com} \\
+            \faPhone{}      & 052-3163179 \\
+            \faMapMarker{}  & Yavne, Israel \\
+        \end{tabularx}
+        \vspace{2pt} \\
+        \rule{\linewidth}{0.4pt} \\
+        % LINKS
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Links}
+        \section*{\large \textbf {Links}}
+        \vspace{-1\baselineskip} 
+        \begin{tabular}{cl}
+            \faGithub{}   & \href{https://github.com/Lashaka}{Github} \\
+            \faLinkedin{} & \href{https://www.linkedin.com/in/victor-rutskin/}{Linkedin} \\
+            \faPen{}     & \href{https://drive.google.com/drive/folders/1WNTWVhgmSy2Srt8VOUuspCrWmtmm6eF0}{References} \\
+            \faEnvelope{} & \href{https://drive.google.com/drive/folders/1J1ULBr3MHknvCdA-tgDWukTBFTxK6miF?usp=sharing}{Certificates} \\
+        \end{tabular}
+        \vspace{2pt} \\
+        \rule{\linewidth}{0.4pt} \\
+        % SKILLS
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Skills}
+        \section*{\large \textbf {Skills}}
+        \vspace{-1\baselineskip} 
+        \begin{tabularx}{\textwidth}{cY}
+            \faStar{}        &  Software \& Web Development \\
+            \faStar{}        &  Object Oriented Programming \\
+            \faStar{}        &  Web API Integration \\
+            \faStar{}        &  Micro-Service Architecture \\
+            \faStar{}        &  Relational Databases \\
+            \faStar{}        &  Web Application Cyber Security \\
+            \faStar{}        &  Scripting \\
+        \end{tabularx}
+        \vspace{1pt} \\
+        \rule{\linewidth}{0.4pt}
+        % Technologies
+        \phantomsection{}
+        \addcontentsline{toc}{section}{Technologies}
+
+        % Frontend
+        \section*{\large \textbf{Technologies}}
+        
+        \section*{\normalfont\centerline{\textbf{Frontend}}}
+        \vspace{-2\baselineskip} 
+        
+        \begin{tabularx}{\textwidth}{cY}
+            \faCode{}        & Javascript, HTML \& CSS \\
+            \faAngular{}        & Angular \\
+            \faCode{}        & Typescript \\
+            \faBootstrap{}        & Bootstrap \\
+        \end{tabularx}
+        \vspace{1pt} \\
+
+        % Backend
+        \section*{\normalfont\centerline{\textbf{Backend}}}
+        \vspace{-2\baselineskip} 
+        
+        \begin{tabularx}{\textwidth}{cY}
+            \faCode{}        & C\# \\
+            \faCode{}        & .NET Core \& Framework \\
+            \faPython{}        & Python \\
+            \faDatabase{}        & Microsoft SQL server (MSSQL) \\
+        \end{tabularx}
+        \vspace{1pt} \\
+
+        % Other
+
+        
+        \section*{\normalfont\centerline{\textbf{Other}}}
+        \vspace{-2\baselineskip} 
+        
+        \begin{tabularx}{\textwidth}{cY}
+            \faGit{}        & Git \\
+            \faSatelliteDish{}        & Electronic Warfare, Cyber RF, etc..  \\
+            \faCamera{}        & Photoshop \\
+            \faUserNinja{}        & Burpsuite \\
+        \end{tabularx}
+        \vspace{1pt} \\
+
+        \rule{\linewidth}{0.4pt}
+
+
+        % Hobbies
+        \section*{\normalfont\centerline{\textbf{Hobbies}}}
+        \vspace{-2\baselineskip} 
+        
+        \begin{tabularx}{\textwidth}{cY}
+            \faGamepad{} & Gaming \\
+            \faUtensils{} & Cooking \\
+            \faYinYang{} & Martial Arts \\
+          % \faSword{} & Martial Arts \\
+        \end{tabularx}
+        \vspace{1pt} \\
+        
+        \rule{\linewidth}{0.4pt}
+
+        % Languages
+        \section*{\normalfont\centerline{\textbf{Languages}}}
+        \vspace{-2\baselineskip} 
+        
+        \begin{tabularx}{\textwidth}{cY}       
+            \includegraphics[height=1.1em]{flag_israel.png} & Hebrew \hfill {\fontsize{16pt}{1em}\selectfont $\star\star\star\star\star$} \\
+            \includegraphics[height=1em]{flag_usa.png} & English \hfill {\fontsize{16pt}{1em}\selectfont $\star\star\star\star\circ$} \\
+            \includegraphics[height=1.1em]{flag_russia.png} & Russian \hfill {\fontsize{16pt}{1em}\selectfont $\star\star\star\star\circ$} \\
+        \end{tabularx}
+        \vspace{1pt} \\
+        
+        \rule{\linewidth}{0.4pt}
+    \end{minipage}
+}%
+\end{document}
